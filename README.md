@@ -5,7 +5,7 @@ This is another version of DIY weather alert system. The first version is [here]
 
 ## Why do you need this?
 
-80% of smartphone users check their phone within 15 minutes after waking up in the morning checking social media, emails and weather. Won't it be wonderful if you have one less thing to worry in the morning?
+80% of smartphone users check their phone within 15 minutes after waking up in the morning for social media, emails and weather. Won't it be wonderful if you have one less thing to worry in the morning?
 
 What if you have a customized weather alert which will only automatically send you a short message ONLY when there is a chance of rain above your pre-defined threshold with fully customizable functions. 
 
