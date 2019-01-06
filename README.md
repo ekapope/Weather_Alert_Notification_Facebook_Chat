@@ -11,8 +11,6 @@ What if you have a customized weather alert which will only automatically send y
 
 Since you are checking emails and social media anyway, do not waste your time checking the weather on the separated app. It is now live on your facebook msg box!
 
-Example screenshot: Facebook Chatbox
-
 ![FB_Chat_Screenshot](https://github.com/ekapope/Weather_Alert_Notification_Facebook_Chat/blob/master/Capture_Facebook_Chat_msg.PNG)
 
 
