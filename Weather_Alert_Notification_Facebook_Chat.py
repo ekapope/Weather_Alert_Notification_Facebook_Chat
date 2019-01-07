@@ -33,9 +33,7 @@ def func_get_weather(url_page):
     # set maximum width, so the links are fully shown and clickable
     pd.set_option('display.max_colwidth', -1)
     json_df['Links'] = json_df['MobileLink'].apply(lambda x: '<a href='+x+'>Link</a>')
-    
-    json_df['Real Feel (degC)'] = json_df['RealFeelTemperature'].apply(lambda x: x.get('Value'))
-    json_df['Weather'] = json_df['IconPhrase'] 
+    link_for_click = json_df['MobileLink'][0]
     json_df['% Rain'] = json_df['RainProbability'] 
     json_df['% Snow'] = json_df['SnowProbability'] 
     json_df[['Date','Time']] = json_df['DateTime'].str.split('T', expand=True)
@@ -59,7 +57,7 @@ def func_get_weather(url_page):
         else: "There will be no rain nor snow, have a good day!"
         
     alert_msg = check_rain +" "+check_snow
-    link_for_click = json_df['MobileLink'][0]
+    
     
     return(current_retrieved_datetime,alert_msg,link_for_click)
     
