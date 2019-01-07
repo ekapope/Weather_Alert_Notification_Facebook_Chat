@@ -14,8 +14,6 @@ import json
 import time
 import requests
 import pandas as pd
-import logging
-from datetime import datetime
 
 ####################################################################################################
 # Define % cutoff for probability of rain and snow.
@@ -43,21 +41,7 @@ def func_get_weather(url_page):
     json_df[['Date','Time']] = json_df['DateTime'].str.split('T', expand=True)
     # trim the time to hh:mm format, change to str
     json_df[['Time']] = json_df['Time'].str.split('+', expand=True)[0].astype(str).str[:5]
-    
-    selected_df = json_df[['Date','Time','Real Feel (degC)','Weather',
-                           '% Rain','% Snow','Links']]
-    
-    # dictionary of cell colors
-    def color_negative_red(val):
-        """
-        Takes a scalar and returns a string with
-        the css property `'color: red'` for negative
-        strings, black otherwise.
-        """
-        color = 'red' if val > rain_prob_cutoff else 'black'
-        return 'color: %s' % color
-    
-    data_html = selected_df.style.applymap(color_negative_red, subset=['% Rain', '% Snow']).set_properties(**{'text-align': 'center','font-family': 'Calibri'}).hide_index().render()
+       
     current_retrieved_datetime = str(json_df['Date'][0])+' '+str(json_df['Time'][0])
     
     check_rain=""
@@ -72,12 +56,12 @@ def func_get_weather(url_page):
         if json_df['% Snow'][i] > snow_prob_cutoff:
             check_snow= ", there is "+str(json_df['% Snow'][i])+"% chance of Snow @ "+str(json_df['Time'][i])
             break
-        else: "There will be no rain nor snow, have agood day!"
+        else: "There will be no rain nor snow, have a good day!"
         
     alert_msg = check_rain +" "+check_snow
     link_for_click = json_df['MobileLink'][0]
     
-    return(data_html,current_retrieved_datetime,alert_msg,link_for_click)
+    return(current_retrieved_datetime,alert_msg,link_for_click)
     
 ####################################################################################################
 # Facebook Setup
@@ -109,7 +93,7 @@ for i in range(num_repeat):
 
     time_old = ''
     try:
-        data_html,current_retrieved_datetime,alert_msg,link_for_click = func_get_weather(url_page)
+        current_retrieved_datetime,alert_msg,link_for_click = func_get_weather(url_page)
     except (RuntimeError, TypeError, NameError, ValueError, urllib.error.URLError):
         print('error catched')
 
