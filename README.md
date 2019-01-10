@@ -21,3 +21,5 @@ Since you are checking emails and social media anyway, do not waste your time ch
 - [Facebook chat setup](https://github.com/carpedm20/fbchat)
 
 Please give it a try, enjoy and let me know your feedback! 
+
+### A complete guide and explaination is published on [Medium](https://medium.com/@ekapope.v/everyday-python-ep-01-create-your-own-weather-alert-using-facebook-messenger-chat-807f66f76034).
