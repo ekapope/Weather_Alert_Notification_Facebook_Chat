@@ -96,10 +96,10 @@ for i in range(num_repeat):
         print('error catched')
 
 # check if there is any changes in weather
-    if len(alert_msg) > 0 and previous_alert_msg == alert_msg:
+    if len(alert_msg) > 1 and previous_alert_msg == alert_msg:
         print(i, current_retrieved_datetime, 'no changes in weather forecast')
         
-    if len(alert_msg) > 0 and previous_alert_msg != alert_msg:
+    if len(alert_msg) > 1 and previous_alert_msg != alert_msg:
 ####### Send facebook msg        
         client = Client(fb_username,fb_password) # login
         users = client.fetchAllUsers()
