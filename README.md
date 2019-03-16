@@ -30,3 +30,6 @@ Please give it a try, enjoy and let me know your feedback!
 
 #### [A complete guide with explaination is published on Medium](https://medium.freecodecamp.org/how-to-get-facebook-messenger-to-notify-you-about-the-weather-8b5e87a64540).
 
+
+####Disclaimer of Damages:
+Use of this script or material is "at your own risk", at all times. You can discontinue the use of this script at any time. I shall not be liable to any damages resulting from the use of this material provided.
