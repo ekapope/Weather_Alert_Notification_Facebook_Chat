@@ -14,6 +14,12 @@ Since you are checking emails and social media anyway, do not waste your time ch
 ![FB_Chat_Screenshot](https://github.com/ekapope/Weather_Alert_Notification_Facebook_Chat/blob/master/Capture_Facebook_Chat_msg.PNG)
 
 
+### There are 3 files in the scripts folder:
+- keys.py : put your facebook email, password, and accuweather API key here
+- main.py : this is the main script, it will call the keys.py and params.py
+- params.py : modify the threshold and location here
+
+
 ### Here are requirements for the setup:
 
 - Python 3.6 with pandas and fbchat packages installed
@@ -23,3 +29,4 @@ Since you are checking emails and social media anyway, do not waste your time ch
 Please give it a try, enjoy and let me know your feedback! 
 
 #### [A complete guide with explaination is published on Medium](https://medium.freecodecamp.org/how-to-get-facebook-messenger-to-notify-you-about-the-weather-8b5e87a64540).
+
