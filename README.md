@@ -28,7 +28,7 @@ Since you are checking emails and social media anyway, do not waste your time ch
 
 Please give it a try, enjoy and let me know your feedback! 
 
-#### [A complete guide with explaination is published on Medium](https://medium.freecodecamp.org/how-to-get-facebook-messenger-to-notify-you-about-the-weather-8b5e87a64540).
+#### [A complete guide with explanation is published on Medium](https://medium.freecodecamp.org/how-to-get-facebook-messenger-to-notify-you-about-the-weather-8b5e87a64540).
 
 
 #### Disclaimer of Damages:
